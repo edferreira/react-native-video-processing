@@ -228,7 +228,7 @@ class RNVideoTrimmer: NSObject {
         callback(["Error creating AVAssetExportSession", NSNull()])
         return
     }
-    .outputURL = NSURL.fileURL(withPath: outputURL.path)
+    exportSession.outputURL = NSURL.fileURL(withPath: outputURL.path)
     exportSession.outputFileType = .mp4
     exportSession.shouldOptimizeForNetworkUse = true
 
